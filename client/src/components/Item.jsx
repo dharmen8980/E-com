@@ -54,7 +54,7 @@ const Item = ({ item, width }) => {
           <Box display="flex" justifyContent="space-between">
             <Box
               display="flex"
-              alignItem="Center"
+              alignItems="Center"
               backgroundColor={shades.neutral[100]}
               borderRadius="3px"
             >

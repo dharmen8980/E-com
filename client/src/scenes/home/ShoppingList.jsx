@@ -45,7 +45,7 @@ const ShoppingList = () => {
     (item) => item.attributes.category === "bestSellers"
   );
   return (
-    <Box width="100%" margin="80px auto">
+    <Box width="90%" margin="80px auto">
       <Typography variant="h3" align="center">
         Our Featured <b>Products</b>
       </Typography>
