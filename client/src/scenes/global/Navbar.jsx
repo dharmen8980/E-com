@@ -45,7 +45,7 @@ const Navbar = () => {
         <Box
           display="flex"
           justifyContent="space-between"
-          coluumnGap="20px"
+          columnGap="20px"
           zIndex="2"
         >
           <IconButton sx={{ color: "black" }}>
