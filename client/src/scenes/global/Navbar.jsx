@@ -39,8 +39,13 @@ const Navbar = () => {
           onClick={() => navigate("/")}
           sx={{ cursor: "pointer" }}
           color={shades.secondary[500]}
+          mt="5px"
         >
-          E-Com
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/thumb/2/2c/One_Piece_Logo.svg/1200px-One_Piece_Logo.svg.png"
+            height={50}
+            width={350}
+          />
         </Box>
         <Box
           display="flex"
@@ -48,7 +53,7 @@ const Navbar = () => {
           columnGap="20px"
           zIndex="2"
         >
-          <IconButton sx={{ color: "black" }}>
+          <IconButton sx={{ color: "black"}} >
             <SearchOutlined />
           </IconButton>
           <IconButton sx={{ color: "black" }}>
@@ -76,7 +81,7 @@ const Navbar = () => {
             </IconButton>
           </Badge>
           <IconButton sx={{ color: "black" }}>
-            <MenuOutlined />
+            <MenuOutlined onClick={() => navigate("/menu")} />
           </IconButton>
         </Box>
       </Box>

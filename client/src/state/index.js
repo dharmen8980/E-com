@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
+// initial state
 const initialState = {
   isCartOpen: false,
   cart: [],
@@ -9,6 +10,7 @@ const initialState = {
 export const cartSlice = createSlice({
   name: "cart",
   initialState,
+  // The `reducers` field lets us define reducers and generate associated actions
   reducers: {
     setItems: (state, action) => {
       state.items = action.payload;
@@ -45,6 +47,7 @@ export const cartSlice = createSlice({
   },
 });
 
+// Action creators are generated for each case reducer function
 export const {
   setItems,
   addToCart,

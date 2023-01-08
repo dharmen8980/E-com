@@ -9,15 +9,17 @@ import { addToCart } from "../state";
 import { useNavigate } from "react-router-dom";
 
 const Item = ({ item, width }) => {
-  const navitgate = useNavigate();
-  const dispatch = useDispatch();
+  const navitgate = useNavigate(); // useNavigate is a hook that returns a function that can be used to navigate to a new route
+  const dispatch = useDispatch(); // useDispatch is a hook that returns a reference to the dispatch function from the Redux store
   const [count, setCount] = useState(1);
   const [isHovered, setIsHovered] = useState(false);
   const {
     palette: { neutral },
   } = useTheme();
 
+  // Destructure the item object to get the category, price, name, and image
   const { category, price, name, image } = item.attributes;
+  // Destructure the image object to get the url
   const {
     data: {
       attributes: {
@@ -68,7 +70,7 @@ const Item = ({ item, width }) => {
             </Box>
             <Button
               onClick={() => {
-                dispatch(addToCart({ item: { ...item, count } }));
+                dispatch(addToCart({ item: { ...item, count } })); // Dispatch the addToCart action with the item and count
               }}
               sx={{ backgroundColor: shades.primary[300], color: "white" }}
             >
@@ -79,9 +81,10 @@ const Item = ({ item, width }) => {
       </Box>
       <Box mt="3px">
         <Typography variant="subtitle2" color={neutral.dark}>
+          {/* // Replace the category with a string that has a space between each word */}
           {category
             .replace(/(A-Z)/g, "$1")
-            .replace(/^./, (str) => str.toUpperCase())}
+            .replace(/^./, (str) => str.toUpperCase())} 
         </Typography>
         <Typography>{name}</Typography>
         <Typography fontWeight="bold">${price}</Typography>
