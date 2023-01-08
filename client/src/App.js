@@ -10,7 +10,7 @@ import Navbar from "./scenes/global/Navbar";
 import Home from "./scenes/home/Home";
 import ItemDetails from "./scenes/itemDetails/ItemDetails";
 import Footer from "./scenes/global/Footer";
-// import Chatbot from "./scenes/global/Chatbot";
+import Chatbot from "./scenes/global/Chatbot";
 
 // Scroll to top on route change
 const ScrollToTop = () => {
@@ -22,12 +22,12 @@ const ScrollToTop = () => {
 };
 function App() {
   // Chatbot state
-  // const [isChatOpen, setIsChatOpen] = useState(false);
+  const [isChatOpen, setIsChatOpen] = useState(false);
   return (
     <div className="app">
       <BrowserRouter>
         <Navbar />
-        {/* <Box
+        <Box
           style={{
             position: "fixed",
             bottom: "-5rem",
@@ -70,7 +70,7 @@ function App() {
           >
             <Chatbot />
           </Box>
-        </Box> */}
+        </Box>
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
