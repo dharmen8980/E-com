@@ -130,7 +130,7 @@ const ItemDetails = () => {
           columnGap="1.33%"
           justifyContent="space-between"
         >
-          {items.slice(0, 4).map((item, i) => (
+          {items.slice(0, 30).map((item, i) => (
             <Item key={`${item.name}-${i}`} item={item} />
           ))}
         </Box>

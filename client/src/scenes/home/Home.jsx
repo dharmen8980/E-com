@@ -6,8 +6,14 @@ import Subscribe from "./Subscribe";
 const Home = () => {
   return (
     <div className="home">
-      <MainCarousel />
-      <ShoppingList />
+      {/* <MainCarousel /> */}
+      {/* <ShoppingList /> */}
+      <iframe
+        // src="https://www.daraz.com.np/"
+        src="https://discountelectronics.com/"
+        width="100%"
+        height="1200px"
+      />
       <Subscribe />
     </div>
   );

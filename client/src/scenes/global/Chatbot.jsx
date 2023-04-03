@@ -7,7 +7,7 @@ const Chatbot = () => {
   const initialMessages = [
     {
       user: "",
-      bot: "Hello, How can I help you?",
+      bot: "Hello, I am SuperEx Chatbot?",
     },
   ];
 
@@ -59,7 +59,9 @@ const Chatbot = () => {
       backgroundColor="rgb(100, 116, 134)"
       textAlign="center"
       position="relative"
-      overflow="auto"
+      px={2}
+      py={1}
+
     >
       <Typography
         variant="h3"
@@ -68,10 +70,10 @@ const Chatbot = () => {
         color="white"
         marginY="0.5rem"
       >
-        Chatbot
+        SupportEX
       </Typography>
       <Box
-        height="30rem"
+        height="60rem"
         display="flex"
         flexDirection="column"
         backgroundColor="rgb(100, 116, 134)"
@@ -94,7 +96,7 @@ const Chatbot = () => {
                     maxWidth: "40rem",
                     px: "20px",
                     py: "2px",
-                    fontSize: "1.2rem",
+                    fontSize: "0.8rem",
                     backgroundColor: "#627E8B",
                   }}
                   style={{
@@ -119,7 +121,7 @@ const Chatbot = () => {
                     maxWidth: "40rem",
                     px: "20px",
                     py: "2px",
-                    fontSize: "1.2rem",
+                    fontSize: "0.8rem",
                     backgroundColor: "#627E8B",
                   }}
                   style={{

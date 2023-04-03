@@ -31,7 +31,7 @@ const Item = ({ item, width }) => {
   } = image;
 
   return (
-    <Box width={width}>
+    <Box width={width} backgroundColor="lightGray">
       <Box
         position="relative"
         onMouseOver={() => setIsHovered(true)}
@@ -43,7 +43,7 @@ const Item = ({ item, width }) => {
           height="400px"
           src={`http://localhost:1337${url}`}
           onClick={() => navitgate(`/item/${item.id}`)}
-          style={{ cursor: "pointer" }}
+          style={{ cursor: "pointer", objectFit: "contain", marginTop: "10px" }}
         />
         <Box
           display={isHovered ? "block" : "none"}
@@ -79,12 +79,12 @@ const Item = ({ item, width }) => {
           </Box>
         </Box>
       </Box>
-      <Box mt="3px">
+      <Box padding="3px 10px 5px 10px">
         <Typography variant="subtitle2" color={neutral.dark}>
           {/* // Replace the category with a string that has a space between each word */}
           {category
             .replace(/(A-Z)/g, "$1")
-            .replace(/^./, (str) => str.toUpperCase())} 
+            .replace(/^./, (str) => str.toUpperCase())}
         </Typography>
         <Typography>{name}</Typography>
         <Typography fontWeight="bold">${price}</Typography>

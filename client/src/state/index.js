@@ -57,4 +57,4 @@ export const {
   setIsCartOpen,
 } = cartSlice.actions;
 
-export default cartSlice.reducer;
+export default cartSlice.reducer; 

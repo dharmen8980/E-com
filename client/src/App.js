@@ -26,15 +26,16 @@ function App() {
   return (
     <div className="app">
       <BrowserRouter>
-        <Navbar />
-        <Box
+        {/* <Navbar /> */}
+        <div
           style={{
             position: "fixed",
             bottom: "-5rem",
             right: "-4.5rem",
             zIndex: "10",
-            width: "50%",
-            maxWidth: "700px",
+            width: "100%",
+            maxWidth: "900px",
+            minWidth: "600px",
           }}
         >
           <TextsmsSharpIcon
@@ -56,7 +57,7 @@ function App() {
               fontSize: "2rem",
               position: "fixed",
               right: "1rem",
-              bottom: "34rem",
+              bottom: "65rem",
               zIndex: "15",
               cursor: "pointer",
               display: isChatOpen ? "block" : "none",
@@ -70,7 +71,7 @@ function App() {
           >
             <Chatbot />
           </Box>
-        </Box>
+        </div>
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Home />} />
